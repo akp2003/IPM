@@ -6,8 +6,8 @@
 @LastEditors: Yinan Mei
 @LastEditTime: 2020-07-17 18:21:16
 '''
-from transformers import AdamW, get_linear_schedule_with_warmup
-
+from transformers import get_linear_schedule_with_warmup
+from torch.optim import AdamW
 
 def build_optimizer(model, num_train_steps, learning_rate, adam_eps, warmup_steps, weight_decay):
     # Prepare optimizer and schedule (linear warmup and decay)
